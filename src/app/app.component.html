@@ -1,0 +1,68 @@
+<!-- experssions -->
+<!-- in javascript we use experssions in the way like we give here -->
+
+<!-- differrent ways to use property bindings  -->
+
+<div [hidden]="!hide">hello iam now visisble1</div>
+<!-- this is a variable we use to hide or display -->
+
+<div [hidden]="''">hello iam now visisble2</div>
+<!-- this is now visible -->
+
+<div [hidden]="'uniuniuniu'">hello iam now visisble3</div>
+<!-- this is now not visisble because a string in javascript is null -->
+
+<div [hidden]="0">hello iam now visisble4</div>
+<!-- this is now visible -->
+
+<div [hidden]="2">hello iam now visisble5</div>
+<!-- this is not visible if the number greater than 0 it shows negative value  -->
+
+<div [hidden]="3 + 3">hello iam now visisble6</div>
+<!-- this is experssion we made so that it is a positive number -->
+
+<div [hidden]="3 - 3">hello iam now visisble7</div>
+<!-- this is equal to zero so its visible -->
+
+<div [hidden]="!hide || !show">hello iam now visisble8</div>
+<!-- we can use it by symbols or logicals  -->
+
+<div [hidden]="!hide && !show">hello iam now visisble9</div>
+<!-- we can use it by symbols or logicals  -->
+
+<div [hidden]="true || false">hello iam now visisble10</div>
+<!-- with the boolean values -->
+
+<div [hidden]="true || false">hello iam now visisble11</div>
+<!-- with the boolean values -->
+
+
+
+
+<!-- interpolation and property binding -->
+
+<!-- interpolation  -->
+<!-- we can render or manipulate through dom objects. -->
+<div class="inter">
+  <img src="{{movie.img}}" alt="">
+</div>
+
+
+<!-- property binding -->
+<!-- we cannot render or manipulate through dom objects. -->
+<div class="proper">
+  <img [src]="movie.img" alt="">
+</div>
+
+
+<!-- style binding -->
+<button (click)="onclick()" [style.color]="buttoncolor">tent</button>
+<button [style.color]="'blue'">on line color</button>
+
+
+<!-- binding to classses -->
+
+<button class="btn btn-info btn-lg"
+(click)="onclick()"
+[style.color]="buttoncolor"
+[class.text-dark]="">color</button>
